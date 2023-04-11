@@ -1,0 +1,6 @@
+1. create new maven
+2. adding dependencies => sprong core , spring context
+3. creating bean : java pojo class
+4. creating configuration file :config.xml
+5. setter injection
+6. main class : can pull and use objects
