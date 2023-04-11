@@ -4,3 +4,104 @@
 4. creating configuration file :config.xml
 5. setter injection
 6. main class : can pull and use objects
+
+Dependency Injection :
+types:
+1. setter injection
+2. constrecutor injection
+3. properties injection
+
+data types for injection : 3
+1. primitive types :
+(1) injection as value : use <value> inside <property>
+ex :
+<property name="studentId">
+            <value>123</value>
+        </property>
+(2) inject as attribute :  add value attribute in <property>
+ex: <property name="studentId" value="123"/>
+
+(3) inject as p schema : use p schmea with <bean>
+ex:
+<bean p:property:value />
+
+2. collection type: List , set , map ,properties can be injecteable.
+(1) inject List :
+
+<bean>
+ <property name="">
+    <list>
+        <value></value>
+        <value></value>
+        <null/>
+       </list>
+   </property>
+ </bean>
+ NOTE :
+ - can also use null in list.
+        ex: <null/>
+ - if want to add one value , no need to use <list> tag .
+        ex: <property name="">
+                    <value></value>
+            </property>
+
+
+(2) inject Set:
+ex :
+<bean>
+ <property name="">
+    <set>
+        <value></value>
+        <value></value>
+
+       </set>
+   </property>
+ </bean>
+
+ (3) Inject map:
+ ex:
+ <bean>
+  <property name="">
+     <map>
+         <entry key="name" value="prachi"/>
+         ________________
+        </map>
+    </property>
+  </bean>
+
+(4) inject Properties:
+ex:
+<bean>
+ <property name="">
+    <props>
+        <prop key="name">Prachi</prop>
+        <prop key="channelName">SPring boot learning</prop>
+    </props>
+
+   </property>
+ </bean>
+
+PRACTICAl:
+- create class (studentCollection) with some data then generate setter , getter , constrctor , toString();
+-
+
+3. reference :
+there are three ways to perform ref :
+- as element :
+    ex:
+    <bean>
+        <property name="">
+            <ref bean="b" >
+        </property>
+    </bean>
+- as attribute :
+    ex:
+        <bean>
+            <property name="" ref="" />
+        </bean>
+- as p schema :
+    ex:
+        <bean class="" name="" p:x = "33" p:ob:ref="bref" />
+
+
+

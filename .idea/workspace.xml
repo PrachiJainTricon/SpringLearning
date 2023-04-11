@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7662b3f-0cc0-40d7-8aea-4be823e52e72" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/springcore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/First Maven Project" beforeDir="false" afterPath="$PROJECT_DIR$/First Maven Project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springcore/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springcore/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
