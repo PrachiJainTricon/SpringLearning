@@ -37,6 +37,11 @@ http://www.springframework.org/schema/context
         <property name="city" value="Delhi" />
     </bean>
 
+    <bean class="org.springcore.autowiring.Address" name="address1">
+        <property name="street" value = "street second example" />
+        <property name="city" value="Lucknnow" />
+    </bean>
+
     <bean class="org.springcore.autowiring.AutowiringWithAnnotation" name="autowiringWithAnnotation"/>
 
 

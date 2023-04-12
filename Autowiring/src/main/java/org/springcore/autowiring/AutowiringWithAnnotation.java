@@ -1,9 +1,11 @@
 package org.springcore.autowiring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class AutowiringWithAnnotation {
-    //@Autowired // autowire on property
+    @Autowired // autowire on property
+    @Qualifier("address1")
     private Address address;
 
     public Address getAddress() {
@@ -20,7 +22,7 @@ public class AutowiringWithAnnotation {
     public AutowiringWithAnnotation() {
     }
 
-    @Autowired // autowire with constructor
+    //@Autowired // autowire with constructor
     public AutowiringWithAnnotation(Address address) {
         super();
         System.out.println("constructor injection");

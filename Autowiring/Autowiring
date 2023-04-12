@@ -1,4 +1,5 @@
-Autowiring  : feature of spring framework in which spring container inject dependencies automatically.
+_________________________________________________Autowiring____________________________________
+  : feature of spring framework in which spring container inject dependencies automatically.
  - Note: cannot use with primitive datatype
  - wiring means lnking one object with another object.
  - We can perform autowiring in two ways ;
@@ -36,4 +37,9 @@ ________________________2. By annotation : by using @Autowired__________________
 --Pratical:
         - use @AUtowired on property or setter or constructor
         - to enable annotation add <context:annotation-config/> in config xml file.
+
+
+Next Topic : __________@Qualifier_______________________
+: wheen there are multiple bean of same class then it is used to give specific bean name which we can to inject.
+: apply it after @Autowired
 
