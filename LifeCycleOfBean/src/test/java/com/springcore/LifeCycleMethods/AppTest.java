@@ -1,4 +1,4 @@
-package com.springcore.LifeCycleMethods;
+package com.springcore.lifecyclemethods;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,0 +1,59 @@
+_______________Life cycle Methods ____________________
+
+spring provide two important methods:
+Note: we can change the name of these method but signature must be same
+1. public void init() : it is used to intialization
+ex:
+code , Loading , config , connecting db , web services etc.
+
+2. public void destroy() : it is used to clean up code
+
+Life cycle :
+1. first we will give bean (class) and Configuration xml file
+2. then it will perform object intilize ( create object then set value the value of object)
+3. now it will call init()
+4. now we can read and use bean
+5. it will call destroy() before delete object
+6. now destroy() will clean up code or destroy object.
+
+Configuration Technique : we can call init() and destroy() method in three ways:
+
+
+1. use xml :
+    Practical :
+     - create bean (LifeCycle.java)
+     - initialize it inside xml
+     - create init() and destroy() in java class (LifeCycle.java) and give its attribute in xml
+     - Note  : to perform destroy() , first we have to use AbstractApplicationContext in main class(App.java) and then use registerShutdownHook() to destroy method.
+
+2. Spring Interface : InitializingBean interface(work as init method) and disposableBean interface (work as destroy method)is being used..
+       Practical :
+        - create bean (ByInterface.java)
+        - initialize it inside xml
+        - implements InitializingBean interface and use afterPropertiesSet() as init().
+        - implements DisposableBean interface and use  destroy() .
+3. Annotation : use @PostConstruct (work as init method) and @PreDestroy(work as destroy method)
+       Practical :
+        - create bean (LifeCycleByAnnotation.java)
+        - initialize it inside xml , to enable all annotation add : <context:annotation-config/>
+        - create start() with @PostConstruct and end() with @PreDestroy.
+        - Option : if you want to enable only @PostConstruct and @PreDestroy use :
+             <bean class = "org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+             and command : <context:annotation-config/>
+
+        NOTE : after java 9 to use @PostConstruct and @PreDestroy , we need to add dependency :
+                <dependency>
+                    <groupId>javax.annotation</groupId>
+                    <artifactId>javax.annotation-api</artifactId>
+                    <version>1.3.2</version>
+                </dependency>
+
+
+
+
+
+
+
+
+
+

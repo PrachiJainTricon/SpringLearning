@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd"
+>
+     <context:annotation-config/>
+<!-- bean for  xml -->
+<!--<bean class="com.springcore.lifecyclemethods.LifeCycle" name="lifecycle" init-method="init" destroy-method="destroy">-->
+<!--    <property name="price" value="23"/>-->
+<!--</bean>-->
+
+<!--    bean for interface-->
+<!--    <bean class="com.springcore.lifecyclemethods.ByInterface" name ="withinterface">-->
+<!--        <property name="price" value="54" />-->
+
+<!--    </bean>-->
+
+<!-- bean for annotation-->
+    <bean class="com.springcore.lifecyclemethods.LifeCycleByAnnotation" name = "lifecycleannotation">
+        <property name="subject" value="Maths"></property>
+    </bean>
+
+
+
+
+</beans>
