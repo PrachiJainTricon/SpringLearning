@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd"
+>
+
+<!--  _________________with value as attribute___________________ -->
+   <bean class="org.springcore.constrctorInjection.Certi" name="cer">
+        <constructor-arg value="Android" />
+
+   </bean>
+
+<!--  constructor injection using c shcema-->
+<!--    <bean class="org.springcore.constrctorInjection.Certi" name="cer"-->
+<!--    c:name = "Python">-->
+    <!--    </bean>-->
+
+    <bean class="org.springcore.constrctorInjection.Person" name = "person">
+        <constructor-arg value = "prachijain" />
+<!--    to resolve ambiguity we used type also    -->
+        <constructor-arg value="12" type="int" />
+        <constructor-arg ref="cer" />
+        <constructor-arg>
+            <list>
+                <value>namaste</value>
+                <value>jainism!</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean class = "org.springcore.constrctorInjection.Addition" name="add">
+<!--        args treat as String by defualt , if there is no string value then it will follow sequence-->
+        <constructor-arg value="12" type = "int" index="1" />
+        <constructor-arg value="34" type = "int" index="0"/>
+
+    </bean>
+
+
+
+
+</beans>
