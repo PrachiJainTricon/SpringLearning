@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd"
+>
+<!--    Autowiring using xml with byName mode : name must be same-->
+<!--    <bean class="org.springcore.autowiring.Address" name="address">-->
+<!--        <property name="street" value = "street example" />-->
+<!--        <property name="city" value="Delhi" />-->
+<!--    </bean>-->
+<!--    <bean class="org.springcore.autowiring.AutowiringByXml" name="autowiringByXml" autowire="byName"/>-->
+
+<!--    Autowiring using xml with ByType mode : type must be same-->
+    <!--        <bean class="org.springcore.autowiring.Address" name="address1">
+            <property name="street" value = "street example" />
+            <property name="city" value="Delhi" />
+        </bean>
+
+        <bean class="org.springcore.autowiring.AutowiringByXml" name="autowiringByXml" autowire="byType"/>-->
+
+<!--    Autowiring using xml with constrctor mode-->
+ <!--   <bean class="org.springcore.autowiring.Address" name="address1">
+        <property name="street" value = "street example" />
+        <property name="city" value="Delhi" />
+    </bean>
+
+    <bean class="org.springcore.autowiring.AutowiringByXml" name="autowiringByXml" autowire="constructor"/>-->
+<context:annotation-config/>
+
+    <bean class="org.springcore.autowiring.Address" name="address">
+        <property name="street" value = "street example" />
+        <property name="city" value="Delhi" />
+    </bean>
+
+    <bean class="org.springcore.autowiring.Address" name="address1">
+        <property name="street" value = "street second example" />
+        <property name="city" value="Lucknnow" />
+    </bean>
+
+    <bean class="org.springcore.autowiring.AutowiringWithAnnotation" name="autowiringWithAnnotation"/>
+
+
+
+</beans>
