@@ -1,0 +1,42 @@
+to perform constructor injection :
+1. create  java class(Person) then generate getter , setter , parameter constructor , override toString()
+2. create a bean in xml
+3. to perform constrctor injection use :
+there are 3 ways:
+    (1) Value as tag or element:
+    ex:
+        <constructor-arg>
+            <value></value>
+        </constructor-arg>
+    (2) value as attribute:
+    ex:
+    <constructor-arg value=""/>
+    (3) as c schema:
+    ex :constructor injection using c shcema
+            <bean class="org.springcore.constrctorInjection.Certi" name="cer"
+                    c:name = "Python">
+            </bean>
+
+NOTE:  to ressolve a
+
+
+Ambiguity problem with constrctor injection:
+Problem : when there are several override constrctor , spring got confuse , beacuse normal behaviour of constructor-args in xml is
+  - it will consider value as String.
+  _ if there is no String value in constructor , then it will run seqence of constrctor.
+  - but if there are String constrctor as well it will first run String params constructor.
+Practical :
+1. create a class (Addition)
+2. Create constrctor with int and double
+ -- it will run in seqence
+3. create constructor with String
+    -- now spring will run String constructor
+solution :
+4. -- use type attribute in constructor injection
+ ex :<constructor-arg value="12" type = "int" />
+5. if you want to define index also you can use
+ ex: <constructor-arg value="34" type = "int" index="0"/>
+
+
+
+

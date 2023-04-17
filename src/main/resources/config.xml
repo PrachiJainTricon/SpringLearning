@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd"
+>
+<!-- ____________Inject primitive type___________
+ <bean id="student1" class="org.springcore.Student">
+         collaborators and configuration for this bean go here
+        <property name="studentId">
+            <value>123</value>
+        </property>
+        <property name="studentName">
+            <value>Prachi Jain</value>
+        </property>
+        <property name="studentAdrress">
+            <value>Delhi</value>
+        </property>
+    </bean>
+ -->
+<!-- _______________inject collection type: List , Set , Map , Properties__________
+    <bean name="emp1" class="org.springcore.StudentCollection">
+        <property name="name" value="Prachi"/>
+        <property name="phones" >
+            <list>
+            <value>6537892</value>
+            <value>0192837</value>
+            ________can also use null value in list_______
+                <null/>
+            </list>
+        </property>
+        <property name="addresses" >
+            <set>
+                <value>Delhi</value>
+                <value>kanpur</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2 month"/>
+                <entry key="python" value="python"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="url">jdbc:jdhkj</prop>
+                <prop key="username">jainPrachi</prop>
+                <prop key="password">123456778</prop>
+
+
+            </props>
+        </property>
+    </bean>
+    -->
+<!--    inject Reference type-->
+<bean class="org.springcore.ReferenceB" name="bref">
+    <property name="y" value="90"/>
+</bean>
+
+<bean class="org.springcore.ReferenceA" name="aref">
+    <property name="x" value="12"/>
+    <!--    <property name="ob">-->
+    <!--        <ref bean="bref" />-->
+    <!--    </property>-->
+
+<!--    ref as attribute-->
+    <property name="ob" ref="bref"/>
+
+
+</bean>
+
+
+</beans>

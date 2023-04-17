@@ -1,0 +1,45 @@
+_________________________________________________Autowiring____________________________________
+  : feature of spring framework in which spring container inject dependencies automatically.
+ - Note: cannot use with primitive datatype
+ - wiring means lnking one object with another object.
+ - We can perform autowiring in two ways ;
+    1. by xml :
+    There are some autowiring modes :
+        - no : in this case , we need to autowiring manually.
+        - byName : use setter injection , it will check for bean name and reference name must be same.
+        - byType : use setter injection ,it will check for class type.
+        - constructor : use constructor injection.
+        - autodetect (deprecated since spring 3)
+    2. By annotation : by using @Autowired
+    there are three with @Autowired
+        - apply @autowired upon property
+        - apply @autowired upon setter
+        - apply @autowired upon constructor
+ - Advantages :
+        - automatice and less code.
+ - Disadvantages:
+        - no control to programmer.
+
+
+______________________________ 1. by xml ________________________
+Practical :
+1. create class (AutoWiringByXml.java and Address.java)
+2. for autowiring by xml :
+ ____________Auto wiring by Xml with type=byName , byType , constructor____________________
+ - in autowiringconfig.xml create bean then link beans by using autowire attribute with byName or byType or constructor mode within bean tag.
+
+ Note :
+  - If you will write different name of the bean (name="address1) , it will give bean with null value.
+  - if we will create 2 beans with same type it will give error like : "expected single matching bean but found 2: address1,address2"
+3. in main class(App.java) , write code to run that bean.
+
+________________________2. By annotation : by using @Autowired_________________________
+--Pratical:
+        - use @AUtowired on property or setter or constructor
+        - to enable annotation add <context:annotation-config/> in config xml file.
+
+
+Next Topic : __________@Qualifier_______________________
+: wheen there are multiple bean of same class then it is used to give specific bean name which we can to inject.
+: apply it after @Autowired
+
