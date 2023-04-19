@@ -1,0 +1,7 @@
+how to use standlone collection (create collection outside bean, through id , we can use in so many places  )?
+
+1. create class (Person.java) as Entity.
+
+2. In config xml file : create bean for entity(Person.java) and define util schema inside <beans >
+- define <util:list> to create standlone list
+- use standlone list schema inside bean through ref attribute
