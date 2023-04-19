@@ -1,4 +1,4 @@
-package org.springcore;
+package org.springcore.stereotypeAnnotation;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
