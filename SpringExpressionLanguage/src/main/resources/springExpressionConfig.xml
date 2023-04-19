@@ -12,13 +12,5 @@ http://www.springframework.org/schema/util
 >
     <context:component-scan base-package="org.springcore.springexpressionlanguage"/>
 
-    <!--    standlone list collection using util schema-->
-    <util:list list-class="java.util.Vector" id="temp">
-        <value>lucknow</value>
-        <value>delhi</value>
-        <value>kanpur</value>
-    </util:list>
 
-    <!--    protope bean cope using xml-->
-    <bean name = "teacher" class="org.springcore.springexpressionlanguage.Teacher" scope="prototype"></bean>
 </beans>
