@@ -1,0 +1,28 @@
+spEL :
+- The Spring Expression Language (SpEL) is a powerful expression language that supports querying and manipulating an object graph at runtime.
+- support parsing and executing expression with the help of @Value
+- syntax :
+@Value("#{expression}")
+
+Note : expression can be class, var , method , character , numerial , constrctor , object ,operator, keywords (which should have return value)
+
+- ex:
+@Value("#{11+12}")
+@Value("#{8>6 ?88 : 22}")
+
+Pratical :
+- create bean Demo.java with @Component
+- In App.java : get bean
+- Demo.java : use @Value
+
+NOTE : Other way to solve expression : - using SpelExpressionParser() class
+
+HOW to invoke static method and variable and creating object using SpEL :
+- Invoke static method :
+Syntax : T(class).method(param)
+- Invoke static variable :
+Syntax : T(class).varaible
+- creating object using SpEL :
+Syntax :new Object(value)
+
+
