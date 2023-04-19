@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+ http://www.springframework.org/schema/util/spring-util.xsd"
+>
+    <!-- _______________inject collection type: List , Set , Map , Properties__________
+        <bean name="emp1" class="org.springcore.UtilSchema.Emp">
+            <property name="name" value="Prachi"/>
+            <property name="phones" >
+                <list>
+                <value>6537892</value>
+                <value>0192837</value>
+
+                    <null/>
+                </list>
+            </property>
+            <property name="addresses" >
+                <set>
+                    <value>Delhi</value>
+                    <value>kanpur</value>
+                </set>
+            </property>
+            <property name="courses">
+                <map>
+                    <entry key="java" value="2 month"/>
+                    <entry key="python" value="python"/>
+                </map>
+            </property>
+            <property name="properties">
+                <props>
+                    <prop key="url">jdbc:mysql//localhost:8080</prop>
+                    <prop key="username">jainPrachi</prop>
+                    <prop key="password">123456778</prop>
+
+
+                </props>
+            </property>
+        </bean> -->
+
+<!--    standlone collection using Util schema-->
+    <util:list list-class="java.util.LinkedList" id="mybestFriend">
+        <value>Prachi</value>
+        <value>Arpit</value>
+        <value>Bhuvnesh</value>
+    </util:list>
+
+<!--    Standlone map-->
+    <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="Spring framework" value="8000"/>
+        <entry key="django" value="5000"/>
+    </util:map>
+
+    <!--    standlone properties- NOTE : Properties is a class so no need to define class , id is enough -->
+    <util:properties id="dbconfig">
+        <prop key="driver"> com.mysql.jdbc.Driver </prop>
+        <prop key="username"> Prachi Jain 2</prop>
+        <prop key="password"> 1234</prop>
+        <prop key="url"> mysql:jdbc://localhost:8080/database</prop>
+    </util:properties>
+
+    <bean class="org.springcore.UtilSchema.Person" name="person1">
+<!--        <property name="friends">-->
+<!--            <ref bean="mybestFriend"/>-->
+<!--        </property>-->
+        <property name="friends" ref="mybestFriend"/>
+    </bean>
+
+<!--    can reuse same list schema by just changing the bean name-->
+    <bean class="org.springcore.UtilSchema.Person" name="person2">
+        <property name="friends" ref="mybestFriend"/>
+        <property name="feeStructure" ref="fees"/>
+    </bean>
+
+<!--    standlone properties-->
+    <bean class="org.springcore.UtilSchema.Person" name="person3">
+        <property name="friends" ref="mybestFriend"/>
+        <property name="feeStructure" ref="fees"/>
+        <property name="properties" ref="dbconfig"/>
+    </bean>
+
+
+
+</beans>
