@@ -24,6 +24,7 @@ COllection with @Value :
 
 Bean Scope : -
 1. singleton : it is by default bean socpe for creating object . it will create one object and give same project while calling.
+Note: hashcode is same
 
 2. prototype : it will create per object per request.
 - to config : using xml : <bean class="" scope="" />
@@ -32,6 +33,7 @@ Bean Scope : -
                     @Component
                     @Scope("---")
                     class Student { }
+Note : hashcode is different
 
 3. request : used for http request
 4. session :

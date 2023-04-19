@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="981e0451-7994-4274-86e8-130409ffda0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springcore/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springcore/stereotypeAnnotation/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springcore/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springcore/stereotypeAnnotation/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stereotype Annotation" beforeDir="false" afterPath="$PROJECT_DIR$/Stereotype Annotation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springcore/stereotypeAnnotation/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springcore/stereotypeAnnotation/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springcore/stereotypeAnnotation/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springcore/stereotypeAnnotation/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stereotypeAnntationConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stereotypeAnntationConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springcore" beforeDir="false" afterPath="$PROJECT_DIR$/../springcore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

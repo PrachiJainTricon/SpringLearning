@@ -2,11 +2,13 @@ package org.springcore.stereotypeAnnotation;
 
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component("ob")
+@Scope("prototype") // define protope bean scope
 public class Student {
 
     @Value("Prachijain")

@@ -18,4 +18,7 @@ http://www.springframework.org/schema/util
         <value>delhi</value>
         <value>kanpur</value>
     </util:list>
+
+<!--    protope bean cope using xml-->
+    <bean name = "teacher" class="org.springcore.stereotypeAnnotation.Teacher" scope="prototype"></bean>
 </beans>
