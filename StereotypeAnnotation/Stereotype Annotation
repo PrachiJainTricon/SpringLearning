@@ -1,0 +1,40 @@
+what is Stereotype Annotation?
+- use to convert xml code into annotation
+ex: in xml file , we need to define bean to create object.then only spring container will create object.
+
+There are many annotation
+1. @Component : used to create bean or object of a class.
+- we need to define package for a class , for that
+    add xml : <context:component-scan base-package="<packege_name>">
+- use @Compoent above a class for which we want to create object
+- object is created inside container.
+ex:
+@Component              == Student student = new Student();
+class Student { }       ==
+
+
+- can give bean name inside : @Component("ob")
+
+2. @Value :
+- can give value to the values through @Value
+COllection with @Value :
+- create standlone Collection using util schema
+- @Value("#{<collection_name>}") : we are using expression inside value
+
+
+Bean Scope : -
+1. singleton : it is by default bean socpe for creating object . it will create one object and give same project while calling.
+Note: hashcode is same
+
+2. prototype : it will create per object per request.
+- to config : using xml : <bean class="" scope="" />
+                OR
+              using anntation :
+                    @Component
+                    @Scope("---")
+                    class Student { }
+Note : hashcode is different
+
+3. request : used for http request
+4. session :
+5. globalsession : used for portlet application
