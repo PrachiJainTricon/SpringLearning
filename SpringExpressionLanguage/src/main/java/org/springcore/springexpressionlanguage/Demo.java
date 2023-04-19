@@ -18,8 +18,12 @@ public class Demo {
     @Value("#{ T(java.lang.Math).E }")  // invoking static variable using SpEL
     private double e;
 
+
     @Value("#{ new java.lang.String('bhai') }") // creating object using SpEL
     private String name;
+
+    @Value("#{ 8>3 }") // boolean type using SpEL
+    private boolean isActive;
 
     public double getE() {
         return e;
@@ -61,6 +65,7 @@ public class Demo {
                 ", z=" + z +
                 ", e=" + e +
                 ", name='" + name + '\'' +
+                ", isActive=" + isActive +
                 '}';
     }
 }

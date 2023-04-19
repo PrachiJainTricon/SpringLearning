@@ -25,4 +25,7 @@ Syntax : T(class).varaible
 - creating object using SpEL :
 Syntax :new Object(value)
 
+Boolean type using SpEL :
+
+
 
