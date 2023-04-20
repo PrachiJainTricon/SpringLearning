@@ -1,0 +1,25 @@
+Note :
+- if you want to close applicaiton context . we need to use :
+ ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("SpringConfigWithAnnotation.xml");
+
+There are 2 ways to config bean annotation :
+ Annotation :
+1 - @Configuration :
+ - @ComponentScan(basePackages = "com.springcore") :  to tell that it will scan the component or base package from classpath.
+
+ Practical :
+ - create Student bean with @Component("firstStudent")
+ - define component scan in xml
+ - to remove complete xml :
+    - create JavaConfiguration. java class
+    - add @Configuration("firststudent") // can define bean name as well
+          @ComponentScan(basePackages = "com.springcore")
+2. @Bean : @ComponentScan +  @Component
+In config.java  :
+- create class of class which we want to make bean (Student.java)
+- remove  @ComponentScan and  @Component .
+- to perform DI :
+    - create Samosa.java class
+    - define Samosa class as var in Student.java with getter , setter , params constrctor
+    - create @Bean for Samosa class  and pass it as param to getStudent bean
+    - @Bean(name= {"student","temp","con"}) : can use to define give multiple name to a bean
