@@ -1,0 +1,69 @@
+what is java jdbc ?
+- it is api to perform operation with database.
+Java program <---> JDBC <----> DB
+
+Problem of java jdbc?
+- lot of code.
+ex: whenever we run query , we need to follow all things in loop.
+connection open -- statement -- execute -- connection close.
+- Exception Handling Problem : checked exception comes again and again (SQLException)
+ex : need to use so much try_catch.
+NOTE : spring jdbc gerernate unchecked exception
+- Repeating all of these codes from one to another db logic is a time consuming task.
+
+Solution : spring jdbc
+SPRING JDBC :
+- JdbcTemplate (class) :spring jdbc will provide a class which has all important method to perform DB operation.
+    - how to create object of JdbcTemplate?
+     ex: JdbcTemplate ---
+     NOTE : - jdbcTemplate need object of dataSource(it is properties inside jdbcTemplate) interface.
+            - datasource : it will contain all info of database such as db url , password, username, driverClass name.
+                   - it has a implementation class named DriverManagerDataSource.
+     - methods of jdbcTemplate :
+        - update() -> insert , update , delete
+        - execute () -> select queries....
+
+
+Spring JDBC :
+what is spring jbbc?
+- it is a powerful mechnism to connect with db and run sql queries.
+Why spring jdbc, while we have java jdbc ?
+- This module can help in connecting to db and perform CURD.
+NOTE: we will use JdbcTemplate spring jdbc module. Spring jdbc use internally java jdbc.
+
+_________________________________________________________________________________________________
+New Maven Project :
+- add 2 dependency for spring jdbc : Mysql connector and spring jdbc
+_______________________________________
+Database setup & Configuration jdbc template to execute queries :
+- create database in mysql (springjdbc) and create table
+- need Jdbctemplate object :
+    - create class (Student.java) with same columns.
+    - to save object : 2 ways :
+        - xml :
+            - create 2 bean : one for JdbcTemplate datasource and second for DriverManagerDatasource(implemenatation of Datasource interface
+____________________________________________________________________________________________________________
+CURD :
+           - App.java :
+                - create object of JdbcTemplate then write insert query then use update()
+           - Create StudentDao and StudentDaoImpl inside com.spring.jdbc.dao package.
+           - create com.spring.jdbc.entity and drag-drop Student.java class.
+           - perform CURD.
+____________________________________________________________________________________________________________
+           - SELECT :
+                - public T queryForObject(String sql, RowMapper<T> rowMapper, Object args) : if need single object
+                - public List<T> queryForObject(String sql, RowMapper<T> rowMapper) : if we want multiple object.
+                What is ROw Mapper?
+                - it will convert result set to class object.
+                - we will implements RowMapper.
+                -
+
+
+
+
+
+        - annotation :
+
+
+
+
