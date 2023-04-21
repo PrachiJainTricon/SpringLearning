@@ -1,5 +1,7 @@
 package org.spring.jdbc.entity;
 
+import java.util.List;
+
 public class Student {
 
 

@@ -50,13 +50,21 @@ CURD :
            - create com.spring.jdbc.entity and drag-drop Student.java class.
            - perform CURD.
 ____________________________________________________________________________________________________________
-           - SELECT :
-                - public T queryForObject(String sql, RowMapper<T> rowMapper, Object args) : if need single object
-                - public List<T> queryForObject(String sql, RowMapper<T> rowMapper) : if we want multiple object.
-                What is ROw Mapper?
-                - it will convert result set to class object.
-                - we will implements RowMapper.
-                -
+- SELECT :
+   - What is ROw Mapper?
+       - it will convert result set to class object.
+       - we will implements RowMapper.
+   - public T queryForObject(String sql, RowMapper<T> rowMapper, Object args) : return Selecting Single Object using Spring Jdbc
+        Pratical :
+            - create RowMapper Implementation.
+            OR
+                    Create anonymous class.
+            - In StudentDao and StudentDaoImpl : create method getStudent();
+            - In App.java : create object of student and return.
+_____________________________________________________________________________________________________________________
+ - public List<T> queryForObject(String sql, RowMapper<T> rowMapper) :
+
+
 
 
 
