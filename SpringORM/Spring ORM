@@ -1,0 +1,40 @@
+Spring ORM : means Spring with ORM(object relational Mapping) framework.
+ ex: using spring with (hibernate , Toplink , iBATIS) Orm.
+
+Benefits of orm with spring :
+- Due to the Spring framework, you do not need to write extra codes before and after the actual database logic such as getting the connection, starting the transaction, committing the transaction, closing the connection, etc.
+- Spring has an IoC(Inversion of control) approach which makes it easy to test the application.
+- Spring framework provides its API for exception handling along with the ORM framework.
+- By using the Spring framework, we can wrap our mapping code with an explicit template wrapper class or AOP(Aspect-oriented programming) style method interceptor.
+- better exception handling.
+- integration transection management.
+
+How to work with spring orm :
+- using HibernateTemplate class with methods (save , update , insert , get ,loadAll).
+
+How can we find hibernate template object?
+- dao class --> dao interface --> hibernateTemplate -->SessionFactory interface --> LocalSessionFactorybean (implementation of SessionFactory)
+- LocalSessionFactory needs three important things :
+    - datasource : inclue db properties (username , password , url , driver)
+    - HibernateProperties :
+    - Annotated Class :
+
+Pratical :
+- add dependency  :spring-orm (jdbc dependency included) and hibernate-core.
+- create config.xml
+- create entity and dao package with classes
+- spring orm configuration : In config.xml file
+
+Pratical : CURD
+- create: save()
+- Update: update()
+- Read: get() and loadALl() or load()
+- Delete: delete()
+
+Creating an applicaiton :
+
+
+
+
+
+

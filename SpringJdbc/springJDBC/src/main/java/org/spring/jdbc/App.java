@@ -38,14 +38,14 @@ public class App
 //        System.out.println("student update number : " + r);
 
 //        Updating
-//        Student student = new Student();
-//        student.setId(333);
-//        student.setName("Bhuvnesh Jain");
-//        student.setCity("Moradabad Jain");
-//
-//        int r  = studentDao.change(student);
-//
-//        System.out.println("student update number : " + r);
+        Student student = new Student();
+        student.setId(333);
+        student.setName("Bhuvnesh Jain");
+        student.setCity("Moradabad Jain");
+
+        int r  = studentDao.change(student);
+
+        System.out.println("student update number : " + r);
 
 //        deleting
 //        Student student = new Student();
@@ -55,8 +55,8 @@ public class App
 //        System.out.println("student update number : " + r);
 
 //        Select with Row Mapper :
-//        Student student =studentDao.getStudent(222);
-//        System.out.println(student);
+//        Student student1 =studentDao.getStudent(222);
+//        System.out.println(student1);
 
 //        select multiple objects:
         List<Student> students = studentDao.getAllStudent();
