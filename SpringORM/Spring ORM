@@ -19,5 +19,22 @@ How can we find hibernate template object?
     - HibernateProperties :
     - Annotated Class :
 
+Pratical :
+- add dependency  :spring-orm (jdbc dependency included) and hibernate-core.
+- create config.xml
+- create entity and dao package with classes
+- spring orm configuration : In config.xml file
+
+Pratical : CURD
+- create: save()
+- Update: update()
+- Read: get() and loadALl() or load()
+- Delete: delete()
+
+Creating an applicaiton :
+
+
+
+
 
 
