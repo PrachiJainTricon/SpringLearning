@@ -34,7 +34,19 @@ Pratical : CURD
 Creating an applicaiton :
 
 
+Spring MVC :
+- What is spring mvc?
+ : A spring model used to develop web application.
+ : MVC - Model , View , Controller design pattern.
+ : Internally it will work with servlet API.
+ : It also has Dependency injection and IOC and Autowiring , all spring features.
 
+- why spring mvc ?
+ : it will separate model, view, controller.
+ : Powerful configuration ( all feature of spring core)
+ : application is lossly coupled (bcz of spring core) like IoC container.
+ : Rapid Application Development.
+ : it is flexible ( can use jsp or valocity for view) and easy to test.
 
 
 
