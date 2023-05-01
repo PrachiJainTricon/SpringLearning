@@ -3,7 +3,10 @@ package com.spring.mvc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import sun.util.resources.LocaleData;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,9 +44,19 @@ public class HomeController {
     }
 
     @RequestMapping("/help")
-    public String help(){
+    public ModelAndView help(){
         System.out.println("This is help url");
-        return "help";
+        ModelAndView modelAndView = new ModelAndView();
+        // creating model and view object
+        modelAndView.addObject("name","Uttam");
+        modelAndView.addObject("rollno",2);
+        LocalDateTime now = LocalDateTime.now();
+        modelAndView.addObject("time",now);
+        // setting the view name
+        modelAndView.setViewName("help");
+
+
+        return modelAndView;
 
     }
 }
