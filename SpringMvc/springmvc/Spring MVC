@@ -1,0 +1,24 @@
+1. install tomcat and config it.
+2. Add spring mvc dependency
+3. Spring mvc configuration :
+ step1: Configure dispatcher servlet in web.xml
+ step2: Create spring configuration part (to define beans)
+ step3: Config view resolver
+ step4: create com.spring.mvc.controller
+ step5: create a view to show(page)
+
+
+ _______________________________
+ ____Sending data from controller to view:_________
+ 1. we can take data from controller to view with help of 2 object : model and modelAndView.
+ - By Model : it has a method addAttributeString key,Object value)
+ - By modelAndView : use addObject(String key , Object value) method.
+2. to get the data:
+ - use scriptlet tag (<% %>)
+ - HttpServletRequest - This enables a servlet to obtain information about a client request.
+ - write : Object ob = getAttribute("key")
+3.Pratical:
+- By Model:
+    - add model in controller
+    - add data in jsp with the help of scriptlet and expression tags.
+
