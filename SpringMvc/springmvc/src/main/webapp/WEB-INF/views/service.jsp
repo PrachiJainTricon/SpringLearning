@@ -9,6 +9,6 @@
 <body>
 <h2>This is service page</h2>
 <h2>Called by service controller</h2>
-<h2>url /services</h2>
+<!-- <h2>url /services</h2> -->
 </body>
 </html>

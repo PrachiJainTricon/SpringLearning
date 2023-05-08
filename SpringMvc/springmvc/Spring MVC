@@ -8,7 +8,7 @@
  step5: create a view to show(page)
 
 
- _______________________________
+ _____________________________________________________________________
  ____Sending data from controller to view:_________
  1. we can take data from controller to view with help of 2 object : model and modelAndView.
  - By Model : it has a method addAttributeString key,Object value)
@@ -21,4 +21,39 @@
 - By Model:
     - add model in controller
     - add data in jsp with the help of scriptlet and expression tags.
+-By ModelAndView
+    - return type should be ModelAndView
+    - need to set view name as well.
 
+________________________________________________________________________________________
+
+jsp expression language:: to print values direct : so that we dont need to use getAttribute() again and again in jsp page.
+- add <%@ page isELIgnored = "false" %>  , so that page will enable to accept jsp expression lanaguage.
+- use help..jsp to implement jsp expression .
+- we can access primitve and collection and predefine(LocalDateTime) datatype as well
+- if we want to traverse a collection using jsp expression.
+    - add jstl dependency in pom.xml.
+    - add <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    - now we can traverse collection using c prefix.
+________________________________________________________________________________________________
+__________Sending data from view to controller:________________
+1. suppose view has one form , inside form action is help to route towards controller
+2. All the data will be present inside object of HttpServletRequest.
+3. inside controller , we can get the data with the help of getParameter('name of filed')
+Or
+    we can get data through @RequestParam (one field data at a time) and
+    - @ModelAttribute used to get multiple fields at a time.
+___________________________________________________________________________________________________
+_______@Request mapping annotation_________
+1. use to map handler method with request url.
+2. can be used on entire class or with particular method.
+3. to specify http method use: @RequestMapping(path = "/home" , method = RequestMethod.GET)
+____________________________________________________________________________________________________
+___________Creating html form to take user input and send to controller______________
+1. create contact.jsp
+2. take html starter template from bootstra 4.
+3. take form from boostrap 4.
+4. use action anf method inside form tag to define path:
+ex: action="/processForm" method="post"
+5. Define controller as well with /processform
+6.
